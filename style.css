@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+ *{
+    margin: 0;
+    padding: 0;
+  }
+
+  nav{
+    background-color:indigo ;
+    color: whitesmoke;
+    height : 65px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-family: "Roboto variant3", Tofu;
+  }
+   
+  nav ul{
+    list-style-type: none;
+  } 
+  
+  .gameContainer {
+    background-color: rgb(244, 255, 127);
+    display: flex;
+    justify-content: center;
+    margin-top: 50px ;
+  }
+
+  .container{   /* grid inside it */
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);  /* make box*/
+    grid-template-columns: repeat(3, 10vw);
+    font-family:"Roboto variant3", Tofu; ;
+  }
+
+  .box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box:hover{
+    background-color:rgb(233, 228, 233);
+  }
+
+  .info {
+    font-size: 20px;
+  }
+
+  .gameinfo{
+    padding: 0 34px;
+    font-family: "Merriweather Sans", sans-serif;
+  
+  }
+  .gameinfo h1{
+    font-size: 2.5rem ;
+ 
+  }
+
+  .imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+  }
+
+ /* utlity class to remove border at coners */
+  .br-0 {    /*class border right  */
+       border-right: 0;
+  }
+  .bl-0{  /* class border left*/
+      border-left: 0;
+  }
+  .bt-0{    /* class border-top*/
+    border-top: 0;
+ }
+ .bb-0{    /* class border-bottom*/
+   border-bottom: 0;
+ }
+
+ #reset {
+  margin: 0 20px;
+  padding: 6px 14px;
+  background-color:rgb(247, 242, 235);
+  border-radius: 6px;
+  font-family: 'Baloo Bhaina 2';
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  
+ }
+ #reset:hover{
+  background-color:rgb(232, 204, 232);
+  
+ }
+
+ @media screen and (max-width: 950px)
+ {
+  .gameContainer{
+    flex-wrap: wrap;
+  }
+  .gameinfo{
+    margin-top: 34px;
+  }
+ 
+
+  .conatiner { /* make it repponsive */
+    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 20vw);
+  }
+
+ }
